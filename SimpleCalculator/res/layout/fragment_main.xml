@@ -125,6 +125,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="172dp"
         android:layout_toLeftOf="@+id/botao2"
+        android:onClick="clicar"
         android:text="1" />
 
     <Button

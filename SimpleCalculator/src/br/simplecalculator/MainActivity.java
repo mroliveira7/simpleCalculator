@@ -6,7 +6,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -24,18 +23,14 @@ public class MainActivity extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
          }
-    	
-        Button botao = (Button) findViewById(R.id.botao1);
-    	botao.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-		//		calculadora.entraValorDisplay('1');
-		//		atualizaDisplay();
-			}
-		});
     }
 	
 	final Calculadora calculadora = new Calculadora();
     
+	public void clicar(View view){
+					calculadora.entraValorDisplay('1');
+					atualizaDisplay();
+	}
 	public void atualizaDisplay()
     {
     	 TextView tv = (TextView)findViewById(R.id.display);
