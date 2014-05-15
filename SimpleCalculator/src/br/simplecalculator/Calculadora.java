@@ -10,19 +10,23 @@ public class Calculadora {
 	{
 		if (Simbolo == '+')
 		{
-			this.displayAtual =+ this.displayAnterior;
+			this.displayAtual = this.displayAnterior + this.displayAtual;
+			this.stringDisplay = String.valueOf(displayAtual);
 		}
 		if (Simbolo == '-')
 		{
-			this.displayAtual =- this.displayAnterior;
+			this.displayAtual = this.displayAnterior - this.displayAtual;
+			this.stringDisplay = String.valueOf(displayAtual);
 		}
 		if (Simbolo == 'X')
 		{
-			this.displayAtual = this.displayAtual * this.displayAnterior;
+			this.displayAtual = this.displayAnterior * this.displayAtual;
+			this.stringDisplay = String.valueOf(displayAtual);
 		}
 		if (Simbolo == '/')
 		{
 			this.displayAtual = this.displayAnterior/this.displayAtual;
+			this.stringDisplay = String.valueOf(displayAtual);
 		}
 	}
 	

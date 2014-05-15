@@ -3,7 +3,6 @@ package br.simplecalculator;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -128,8 +127,11 @@ public class MainActivity extends ActionBarActivity {
     	 
     }
 	
-	public void imprime(View view){
-		Log.i("TAG", calculadora.getStringDisplay());
+	public void zeraValores(View view){
+		calculadora.setDisplayAnterior(0f);
+		calculadora.setDisplayAtual(0f);
+		calculadora.setStringDisplay("0");
+		atualizaDisplay();
 	}
 
     public static class PlaceholderFragment extends Fragment {
