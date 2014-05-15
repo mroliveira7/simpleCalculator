@@ -10,22 +10,18 @@ public class Calculadora {
 	{
 		if (Simbolo == '+')
 		{
-			this.displayAnterior = this.displayAtual;
 			this.displayAtual =+ this.displayAnterior;
 		}
 		if (Simbolo == '-')
 		{
-			this.displayAnterior = this.displayAtual;
 			this.displayAtual =- this.displayAnterior;
 		}
 		if (Simbolo == 'X')
 		{
-			this.displayAnterior = this.displayAtual;
 			this.displayAtual = this.displayAtual * this.displayAnterior;
 		}
 		if (Simbolo == '/')
 		{
-			this.displayAnterior = this.displayAtual;
 			this.displayAtual = this.displayAnterior/this.displayAtual;
 		}
 	}
