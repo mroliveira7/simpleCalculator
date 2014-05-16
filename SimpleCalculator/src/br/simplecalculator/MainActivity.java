@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+//Inicialização Da janela principal do android MainActivity
 public class MainActivity extends ActionBarActivity {
     
 	@Override
@@ -25,9 +25,13 @@ public class MainActivity extends ActionBarActivity {
          }
     }
 	
+	//Instanciação do objeto calculadora definido na classe
 	final Calculadora calculadora = new Calculadora();
+	
+	//variável pra guardar operações
 	public char Operacao;
     
+	//Métodos associados a cada botão
 	public void clicar1(View view){
 		
 		calculadora.entraValorDisplay('1');
@@ -133,6 +137,8 @@ public class MainActivity extends ActionBarActivity {
 		}
 		
 	}
+	
+	//Método que mantém a TextView sempre atualizada com o valor correto
 	public void atualizaDisplay()
     {
     	 TextView tv = (TextView)findViewById(R.id.display);

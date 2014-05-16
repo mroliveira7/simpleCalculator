@@ -1,6 +1,6 @@
+
+/*Classe criada para fluxo de operaçãoes da calculadora e controle das operações*/
 package br.simplecalculator;
-
-
 
 public class Calculadora {
 
@@ -8,6 +8,7 @@ public class Calculadora {
 	private float displayAnterior;
 	private String stringDisplay = "";
 
+	//Método que realiza e controla o fluco das operações
 	public void realizaOperacoes(char Simbolo)
 	{
 		if (Simbolo == '+')
@@ -32,6 +33,8 @@ public class Calculadora {
 		}
 	}
 	
+	//Método que adiciona os números no display e o converte para float para
+	//realização de operações
 	public void entraValorDisplay(char simbolo)
 	{
 		if (this.stringDisplay.startsWith("0"))
@@ -45,6 +48,9 @@ public class Calculadora {
 		}
 	}
 	
+	
+	//Getters e Setters para melhor controle dos valores e melhor entendimento do 
+	//algoritmo
 	public float getDisplayAtual() {
 		return displayAtual;
 	}
