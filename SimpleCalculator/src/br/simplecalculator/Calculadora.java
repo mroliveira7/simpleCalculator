@@ -1,5 +1,7 @@
 package br.simplecalculator;
 
+
+
 public class Calculadora {
 
 	private float displayAtual;
@@ -32,8 +34,15 @@ public class Calculadora {
 	
 	public void entraValorDisplay(char simbolo)
 	{
-		this.stringDisplay = this.stringDisplay + simbolo;
-		this.displayAtual = Float.parseFloat(this.stringDisplay);
+		if (this.stringDisplay.startsWith("0"))
+		{
+			this.stringDisplay = "" + simbolo;
+		}
+		else
+		{
+			this.stringDisplay = this.stringDisplay + simbolo;
+			this.displayAtual = Float.parseFloat(this.stringDisplay);
+		}
 	}
 	
 	public float getDisplayAtual() {

@@ -1,5 +1,6 @@
 package br.simplecalculator;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -26,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
 	final Calculadora calculadora = new Calculadora();
 	public char Operacao;
     
-	public void clicar1(View view){		
+	public void clicar1(View view){
 		
 		calculadora.entraValorDisplay('1');
 		atualizaDisplay();
@@ -117,8 +119,19 @@ public class MainActivity extends ActionBarActivity {
 	}
 	public void clicarIgual(View view)
 	{
-		calculadora.realizaOperacoes(Operacao);
-		atualizaDisplay();
+		if(Operacao == '/' && calculadora.getDisplayAtual() == 0.0)
+		{
+			Context contexto = getApplicationContext();
+			Toast toast = Toast.makeText(contexto , "Impossível realizar divisão por 0", Toast.LENGTH_SHORT);
+			toast.show();
+			zeraValores(view);
+		}
+		else
+		{
+			calculadora.realizaOperacoes(Operacao);
+			atualizaDisplay();
+		}
+		
 	}
 	public void atualizaDisplay()
     {
