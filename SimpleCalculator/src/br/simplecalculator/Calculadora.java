@@ -40,6 +40,7 @@ public class Calculadora {
 		if (this.stringDisplay.startsWith("0"))
 		{
 			this.stringDisplay = "" + simbolo;
+			this.displayAtual = Float.parseFloat(this.stringDisplay);
 		}
 		else
 		{
